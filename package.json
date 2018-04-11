@@ -1,0 +1,25 @@
+{
+  "name": "purple",
+  "version": "1.0.0",
+  "description": "Purple Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kestess/purple.git"
+  },
+  "keywords": [
+    "parser"
+  ],
+  "author": "John Estess",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kestess/purple/issues"
+  },
+  "homepage": "https://github.com/kestess/purple#readme",
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  }
+}
