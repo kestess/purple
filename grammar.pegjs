@@ -1,12 +1,7 @@
-// Simple Arithmetics Grammar
-// ==========================
-//
-// Accepts expressions like "2 * (3 + 4)" and computes their value.
-
 Start
   = exp:(Expression)* "=" {
     return exp.reduce(function(result, element) {
-        return result;
+        return exp[0];
       }, 0);
   }
   
@@ -28,11 +23,10 @@ Term
 
 Factor
   = "(" _ expr:Expression _ ")" { return expr; }
-  / Integer
+  / Float
 
-Integer "integer"
-  = _ [0-9]+ { return parseInt(text(), 10); }
+Float "float"
+  = _ [0-9]+ _ ("." [0-9]+)*  { return parseFloat(text(), 10); }
 
 _ "whitespace"
   = [ \t\n\r]*
-
